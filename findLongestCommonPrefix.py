@@ -6,7 +6,5 @@ def findLongestCommonPrefix(string_list):
 	for iterator in range(0, len(shortest_string)):
 		prefix = shortest_string[0:iterator]
 		for elem in string_list:
-			if(elem.startswith(prefix)):
-				continue
-			else:
+			if not(elem.startswith(prefix)):
 				return shortest_string[0:iterator]
